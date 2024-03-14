@@ -5,7 +5,9 @@ A collection of utilities for forms in Symfony
 * Disable client side validation
 
 ## Installation
-`composer require studodev/form-util-bundle`
+```
+composer require studodev/form-util-bundle
+```
 
 ## Configuration
 ```YAML
