@@ -13,7 +13,7 @@ class FormUtilBundle extends AbstractBundle
     {
         $definition->rootNode()
             ->children()
-                ->booleanNode('disable_client_validation')->end()
+                ->booleanNode('disable_client_validation')->defaultFalse()->end()
             ->end()
         ;
     }
@@ -23,7 +23,7 @@ class FormUtilBundle extends AbstractBundle
         $container->import('../config/services.yaml');
 
         $container->services()->get(ClientValidationExtension::class)
-            ->arg(0, $config['disbale_client_validation'])
+            ->arg(0, $config['disable_client_validation'])
         ;
     }
 }
