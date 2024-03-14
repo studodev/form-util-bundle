@@ -3,6 +3,7 @@
     "description": "Collection of utils for forms in Symfony",
     "type": "library",
     "license": "MIT",
+    "keywords": ["symfony", "form", "util", "bundle"],
     "autoload": {
         "psr-4": {
             "Studodev\\FormUtilBundle\\": "src/"
@@ -14,5 +15,8 @@
             "email": "hello@rdelbaere.fr"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=8.2",
+        "symfony/form": "^6.4 || ^7.0"
+    }
 }
