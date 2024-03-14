@@ -1,0 +1,3 @@
+services:
+    Studodev\FormUtilBundle\Form\Extension\ClientValidationExtension:
+        tags: ['form.type_extension']
