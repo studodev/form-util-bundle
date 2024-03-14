@@ -1,6 +1,6 @@
 {
     "name": "studodev/form-util-bundle",
-    "description": "Collection of utils for forms in Symfony",
+    "description": "A collection of utilities for forms in Symfony",
     "type": "library",
     "license": "MIT",
     "keywords": ["symfony", "form", "util", "bundle"],
