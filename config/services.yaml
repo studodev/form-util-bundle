@@ -1,3 +1,5 @@
 services:
     Studodev\FormUtilBundle\Form\Extension\ClientValidationExtension:
         tags: ['form.type_extension']
+        arguments:
+            ['%form_util.disable_client_validation%']

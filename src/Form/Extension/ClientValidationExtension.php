@@ -8,6 +8,11 @@ use Symfony\Component\Form\FormView;
 
 class ClientValidationExtension extends AbstractTypeExtension
 {
+    public function __construct(private readonly bool $disableClientValidation)
+    {
+        dd($this->disableClientValidation);
+    }
+
     public function buildView(FormView $view, FormInterface $form, array $options): void
     {
         if (!$form->isRoot()) {
