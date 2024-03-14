@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "keywords": ["symfony", "form", "util", "bundle"],
+    "version": "1.0",
     "autoload": {
         "psr-4": {
             "Studodev\\FormUtilBundle\\": "src/"
