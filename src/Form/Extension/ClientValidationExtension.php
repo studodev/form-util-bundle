@@ -10,7 +10,11 @@ class ClientValidationExtension extends AbstractTypeExtension
 {
     public function buildView(FormView $view, FormInterface $form, array $options): void
     {
-        dd('ici');
+        if (!$form->isRoot()) {
+            return;
+        }
+
+        $view->vars['attr']['novalidate'] = null;
     }
 
     public static function getExtendedTypes(): iterable
