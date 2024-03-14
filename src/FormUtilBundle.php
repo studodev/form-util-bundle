@@ -5,5 +5,5 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class FormUtilBundle extends AbstractBundle
 {
-    
+
 }
