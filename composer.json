@@ -17,6 +17,8 @@
     ],
     "require": {
         "php": ">=8.2",
-        "symfony/form": "^6.4 || ^7.0"
+        "symfony/form": "^6.4 || ^7.0",
+        "symfony/validator": "^6.4 || ^7.0",
+        "symfony/mime": "^6.4 || ^7.0"
     }
 }

@@ -1,3 +1,8 @@
 services:
     Studodev\FormUtilBundle\Form\Extension\ClientValidationExtension:
         tags: ['form.type_extension']
+
+    Studodev\FormUtilBundle\Form\Extension\FileAcceptExtension:
+        tags: [ 'form.type_extension' ]
+        arguments:
+            $validator: '@Symfony\Component\Validator\Validator\ValidatorInterface'
