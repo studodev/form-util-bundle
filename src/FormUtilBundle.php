@@ -1,4 +1,5 @@
 <?php
+
 namespace Studodev\FormUtilBundle;
 
 use Studodev\FormUtilBundle\Form\Extension\ClientValidationExtension;
@@ -10,8 +11,8 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class FormUtilBundle extends AbstractBundle
 {
-    const CONFIG_KEY_CLIENT_VALIDATION = 'disable_client_validation';
-    const CONFIG_KEY_ACCEPT_ATTRIBUTE = 'enable_constraint_based_accept_attribute';
+    public const CONFIG_KEY_CLIENT_VALIDATION = 'disable_client_validation';
+    public const CONFIG_KEY_ACCEPT_ATTRIBUTE = 'enable_constraint_based_accept_attribute';
 
     public function configure(DefinitionConfigurator $definition): void
     {
