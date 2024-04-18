@@ -1,5 +1,4 @@
 <?php
-
 namespace Studodev\FormUtilBundle\Form\Extension;
 
 use Symfony\Component\Form\AbstractTypeExtension;
