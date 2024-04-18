@@ -36,7 +36,7 @@ class FileAcceptExtension extends AbstractTypeExtension
             return;
         }
 
-//        $view->vars['attr']['accept'] = implode(',', $mimeTypes);
+        $view->vars['attr']['accept'] = implode(',', $mimeTypes);
     }
 
     private function computeFromForm(FormInterface $form): array
