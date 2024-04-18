@@ -1,0 +1,20 @@
+name: CI
+on: [push, pull_request]
+jobs:
+    fixer:
+        name: PHP CS-Fixer
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: docker://oskarstark/php-cs-fixer-ga
+              with:
+                  args: --diff --dry-run
+    test:
+        name: PHPUnit
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: php-actions/composer@v6
+            - uses: php-actions/phpunit@v3
+              with:
+                  version: 9
