@@ -9,4 +9,11 @@ use Symfony\Component\Validator\Constraint;
 class NotDisposableEmail extends Constraint
 {
     public string $message = 'The e-mail {{ value }} use a disposable domain.';
+
+    public function __construct(?array $options = null, ?string $message = null, ?array $groups = null, mixed $payload = null)
+    {
+        parent::__construct($options, $groups, $payload);
+
+        $this->message = $message ?? $this->message;
+    }
 }
