@@ -12,6 +12,8 @@ composer require studodev/form-util-bundle
 ```
 
 ## Configuration
+Create the configuration file at path `config/packages/form_util.yaml`
+### Exemple
 ```YAML
 form_util:
     disable_client_validation: true
