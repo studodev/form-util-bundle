@@ -3,6 +3,6 @@ services:
         tags: ['form.type_extension']
 
     Studodev\FormUtilBundle\Form\Extension\FileAcceptExtension:
-        tags: [ 'form.type_extension' ]
+        tags: ['form.type_extension']
         arguments:
             $validator: '@Symfony\Component\Validator\Validator\ValidatorInterface'
