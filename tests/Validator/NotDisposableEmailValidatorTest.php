@@ -2,6 +2,7 @@
 
 namespace Studodev\FormUtilBundle\Tests\Validator;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Studodev\FormUtilBundle\Validator\NotDisposableEmail;
 use Studodev\FormUtilBundle\Validator\NotDisposableEmailValidator;
@@ -18,9 +19,7 @@ class NotDisposableEmailValidatorTest extends TestCase
         $validator->validate('test@gmail.com', $constraint);
     }
 
-    /**
-     * @dataProvider invalidEmails
-     */
+    #[DataProvider('invalidEmails')]
     public function testInvalidEmail($email): void
     {
         $constraint = new NotDisposableEmail();
@@ -54,7 +53,7 @@ class NotDisposableEmailValidatorTest extends TestCase
         return $context;
     }
 
-    private function invalidEmails(): array
+    public static function invalidEmails(): array
     {
         return [
             ['test@yopmail.com'],

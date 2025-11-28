@@ -22,13 +22,13 @@
     ],
     "require": {
         "php": ">=8.2",
-        "symfony/form": "^6.4 || ^7.0",
-        "symfony/validator": "^6.4 || ^7.0",
-        "symfony/mime": "^6.4 || ^7.0"
+        "symfony/form": "^6.4 || ^7.4",
+        "symfony/validator": "^6.4 || ^7.4",
+        "symfony/mime": "^6.4 || ^7.4"
     },
     "require-dev": {
         "symfony/test-pack": "^1.1",
-        "symfony/var-dumper": "^7.0",
+        "symfony/var-dumper": "^7.4",
         "friendsofphp/php-cs-fixer": "^3.54"
     }
 }

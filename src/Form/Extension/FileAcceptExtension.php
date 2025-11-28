@@ -16,7 +16,7 @@ class FileAcceptExtension extends AbstractTypeExtension
 
     public function __construct(
         private readonly bool $enableAcceptAttribute,
-        private readonly ValidatorInterface $validator
+        private readonly ValidatorInterface $validator,
     ) {
         $this->mimeTypesHelper = MimeTypes::getDefault();
     }
@@ -59,7 +59,8 @@ class FileAcceptExtension extends AbstractTypeExtension
         $propertyMetadata = $dataClassMetadata->getPropertyMetadata($propertyName);
 
         foreach ($propertyMetadata as $metadata) {
-            $constraint = $this->findFileConstraint($metadata->constraints);
+            $constraint = $this->findFileConstraint($metadata->getConstraints());
+
             if (!$constraint) {
                 return [];
             }
