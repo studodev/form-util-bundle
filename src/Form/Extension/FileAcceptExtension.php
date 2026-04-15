@@ -85,6 +85,7 @@ class FileAcceptExtension extends AbstractTypeExtension
     private function computeMimeTypes(File $constraint): array
     {
         $mimeTypes = [];
+
         if (!empty($constraint->extensions)) {
             if (is_array($constraint->extensions)) {
                 foreach ($constraint->extensions as $key => $extension) {
@@ -96,9 +97,9 @@ class FileAcceptExtension extends AbstractTypeExtension
                 }
 
                 return array_unique($mimeTypes);
-            } else {
-                return $this->mimeTypesHelper->getMimeTypes($constraint->extensions);
             }
+
+            return $this->mimeTypesHelper->getMimeTypes($constraint->extensions);
         }
 
         if (!empty($constraint->mimeTypes)) {
